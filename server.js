@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const cors = require('cors');
+const PORT = 8000;
 const { request } = require('express');
 app.use(cors());
 
@@ -23,7 +24,7 @@ const classes = {
     }
 }
 
-app.listen(8000,()=>{
+app.listen(process.env.port || PORT,()=>{
     console.log("FF14 Server Started")
 })
 

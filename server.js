@@ -24,7 +24,7 @@ const classes = {
     }
 }
 
-app.listen(process.env.port || PORT,()=>{
+app.listen(process.env.PORT || PORT,()=>{
     console.log("FF14 Server Started")
 })
 

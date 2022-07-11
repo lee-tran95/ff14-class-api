@@ -21,6 +21,22 @@ const classes = {
     'gunbreaker': {
         'weapon': 'gunblade',
         'role': 'tank'
+    },
+    'white mage': {
+        'weapon': 'staff',
+        'role': 'healer'
+    },
+    'sage': {
+        'weapon': 'nouliths',
+        'role': 'healer'
+    },
+    'astrologian': {
+        'weapon':  'star globe',
+        'role': 'healer'
+    },
+    'scholar': {
+        'weapon': 'book',
+        'role': 'healer'
     }
 }
 
@@ -34,7 +50,6 @@ app.get('/',(req,res)=>{
 
 app.get('/api/:name',(req,res)=>{
     const className = req.params.name.toLowerCase();
-    console.log(className)
     if(classes[className]){
         res.json(classes[className])
     }else{
